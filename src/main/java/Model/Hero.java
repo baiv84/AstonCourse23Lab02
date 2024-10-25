@@ -1,9 +1,8 @@
 package Model;
 
-import Tools.RandomNum;
 import lombok.Getter;
 
-public class Hero {
+abstract class Hero {
     @Getter
     protected String name;
 
@@ -11,9 +10,5 @@ public class Hero {
         this.name = name;
     }
 
-    public void attackEnemy(Enemy enemy) {
-        int damage = RandomNum.nextRandom(20, 50);
-        enemy.takeDamage(damage);
-        System.out.println("HERO: Enemy - " + enemy + " took damage - " + damage);
-    }
+    abstract void attackEnemy(Enemy enemy);
 }
