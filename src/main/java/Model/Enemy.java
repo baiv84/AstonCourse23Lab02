@@ -3,7 +3,7 @@ package Model;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Enemy implements Mortal {
+abstract public class Enemy implements Mortal {
     @Getter
     @Setter
     private int health;
@@ -24,6 +24,10 @@ public class Enemy implements Mortal {
         }
     }
 
+    public boolean reincarnate() {
+        return false;
+    }
+
     @Override
     public String toString() {
         return name;
@@ -33,4 +37,7 @@ public class Enemy implements Mortal {
     public boolean isAlive() {
         return health > 0 ? true : false;
     }
+
+    abstract public void attackHero(Hero hero);
+
 }
