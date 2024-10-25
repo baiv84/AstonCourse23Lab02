@@ -3,7 +3,7 @@ package Model;
 import lombok.Getter;
 import lombok.Setter;
 
-public class Enemy {
+public class Enemy implements Mortal {
     @Getter
     @Setter
     private int health;
@@ -27,5 +27,10 @@ public class Enemy {
     @Override
     public String toString() {
         return name;
+    }
+
+    @Override
+    public boolean isAlive() {
+        return health > 0 ? true : false;
     }
 }
