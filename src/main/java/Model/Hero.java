@@ -4,7 +4,7 @@ import lombok.Getter;
 
 public class Hero {
     @Getter
-    private String name;
+    protected String name;
 
     public Hero(String name) {
         this.name = name;
