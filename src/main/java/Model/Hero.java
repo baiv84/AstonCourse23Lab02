@@ -2,7 +2,7 @@ package Model;
 
 import lombok.Getter;
 
-abstract class Hero {
+abstract public class Hero {
     @Getter
     protected String name;
 
@@ -10,5 +10,5 @@ abstract class Hero {
         this.name = name;
     }
 
-    abstract void attackEnemy(Enemy enemy);
+    abstract public void attackEnemy(Enemy enemy);
 }
